@@ -1,0 +1,368 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1742301318544
+  modified: 1742301318544
+collection:
+  - name: aluno
+    meta:
+      id: fld_73f49ede4fb94a6db8bf0e583c013ed9
+      created: 1744738863301
+      modified: 1744738863301
+      sortKey: -1744738863301
+    children:
+      - url: http://localhost:3001/a/5
+        name: New Request
+        meta:
+          id: req_6aba53ef7ba94b74bcb4b7d86fb1a394
+          created: 1744738885981
+          modified: 1744741536687
+          isPrivate: false
+          sortKey: -1744738885981
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/a/2
+        name: New Request
+        meta:
+          id: req_0b09b5680c5447a4a69cc98c7457a7cc
+          created: 1744738887476
+          modified: 1744741415440
+          isPrivate: false
+          sortKey: -1744738887476
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"ra": "2",
+            		"nome": "Larissa Vitória Santos",
+            		"email": "larivitoria@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/a
+        name: New Request
+        meta:
+          id: req_d511dc8a05064e5a87bd7baf52d728b2
+          created: 1744738889185
+          modified: 1744741512518
+          isPrivate: false
+          sortKey: -1744738889185
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "ra":"5",
+             "nome":"Rebeca ",
+              "email":"rebecaincth@gmail.com"
+
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/a
+        name: New Request
+        meta:
+          id: req_b0812bad6c1c40fa82d09ad51f0cd90e
+          created: 1744738890909
+          modified: 1744738945348
+          isPrivate: false
+          sortKey: -1744738890909
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: telefone
+    meta:
+      id: fld_9d96de31e7604d86862a9a7d6c33cbff
+      created: 1744738870773
+      modified: 1744742042591
+      sortKey: -1744738870773
+    children:
+      - url: http://localhost:3001/t/5
+        name: New Request
+        meta:
+          id: req_bfdd2cdb00384e39bc1f953e633c5b63
+          created: 1744741542631
+          modified: 1744741991043
+          isPrivate: false
+          sortKey: -1744741542631
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/t/2
+        name: New Request
+        meta:
+          id: req_f91acf30b0a5475b96d20bb42e1ddfee
+          created: 1744741545050
+          modified: 1744741942798
+          isPrivate: false
+          sortKey: -1744741545050
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "numero": "11112245699",
+              "tipo": "celular",
+              "aluno_ra": {
+                "connect": {
+                  "ra": "2"
+                }
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/t
+        name: New Request
+        meta:
+          id: req_2f2f54587c18439ea009673df9e25fe8
+          created: 1744741546268
+          modified: 1744742068785
+          isPrivate: false
+          sortKey: -1744741546268
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "numero": "33444998867",
+              "tipo": "residencial",
+              "aluno_ra": {
+                "connect": {
+                  "ra": "2"
+                }
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/t
+        name: New Request
+        meta:
+          id: req_9a6a32ca24d549b19828e2b9af0549f5
+          created: 1744741547574
+          modified: 1744741578757
+          isPrivate: false
+          sortKey: -1744741547574
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: atividade
+    meta:
+      id: fld_702f46853e9b4f98bf58c955a9eb57f5
+      created: 1744738879234
+      modified: 1744742050161
+      sortKey: -1744738879234
+    children:
+      - url: http://localhost:3001/at/6
+        name: New Request
+        meta:
+          id: req_cc10baa16ca6423d8ed71b67237d40f9
+          created: 1744742097805
+          modified: 1744742318646
+          isPrivate: false
+          sortKey: -1744742097805
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/at/1
+        name: New Request
+        meta:
+          id: req_439853dd68f348409e74a73a6fcbabd0
+          created: 1744742099653
+          modified: 1744742297970
+          isPrivate: false
+          sortKey: -1744742099653
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "Biologia",
+              "data_inicio": "2025-04-15T08:00:00.000Z",
+              "data_entrega": "2025-04-20T23:59:00.000Z",
+              "nota": 8,
+              "peso": 2,
+              "parcial": 4,
+              "calcParcial": 4,
+              "aluno_ra": {
+                "connect": {
+                  "ra": "4"
+                }
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/at
+        name: New Request
+        meta:
+          id: req_88f092235c5544e9b3d8e34c0dc120b6
+          created: 1744742101647
+          modified: 1744742251359
+          isPrivate: false
+          sortKey: -1744742101647
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "nome": "portutgues",
+              "data_inicio": "2025-04-15T08:00:00.000Z",
+              "data_entrega": "2025-04-20T23:59:00.000Z",
+              "nota": 10,
+              "peso": 3,
+              "parcial": 6,
+              "calcParcial": 4,
+              "aluno_ra": {
+                "connect": {
+                  "ra": "4"
+                }
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/at
+        name: New Request
+        meta:
+          id: req_aa55372c2b0d4a94a42510bd7765b7e2
+          created: 1744742103209
+          modified: 1744742120154
+          isPrivate: false
+          sortKey: -1744742103209
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742301325439
+    modified: 1742301325439
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742301325381
+    modified: 1742301325381
+    isPrivate: false

@@ -6,53 +6,58 @@ const create = async (req, res) => {
         const atividade = await prisma.atividade.create({
             data: req.body
         });
-        res.status(201).json(atividade).end();
+        res.status(201).json(atividade);
     } catch (e) {
-        res.status(400).json(e).end();
+        res.status(400).json({ error: e.message });
     }
 }
 
 const read = async (req, res) => {
-    const atividades = await prisma.atividade.findMany();
+    const atividades = await prisma.atividade.findMany({
+        include: {
+            aluno_ra: true
+        }
+    });
     res.json(atividades);
 }
 
 const readOne = async (req, res) => {
-    const atividade = await prisma.atividade.findFirst({
+    const atividade = await prisma.atividade.findUnique({
         where: {
-            atividade_id: Number(req.params.id)
+            id: Number(req.params.id)
         },
         include: {
-            pedidos: true
+            aluno_ra: true
         }
     });
-    res.json(atividade);
+    if (atividade) res.json(atividade);
+    else res.status(404).json({ error: 'Atividade não encontrada' });
 }
 
 const update = async (req, res) => {
     try {
         const atividade = await prisma.atividade.update({
-            data: req.body,
             where: {
-                atividade_id: Number(req.params.id)
-            }
+                id: Number(req.params.id)
+            },
+            data: req.body
         });
-        res.status(202).json(atividade).end();
+        res.status(200).json(atividade);
     } catch (e) {
-        res.status(400).json(e).end();
+        res.status(400).json({ error: e.message });
     }
 }
 
 const remove = async (req, res) => {
     try {
-        const atividade = await prisma.atividade.delete({
+        await prisma.atividade.delete({
             where: {
-                atividade_id: Number(req.params.id)
+                id: Number(req.params.id)
             }
         });
-        res.status(204).json(atividade).end();
+        res.status(204).end();
     } catch (e) {
-        res.status(400).json(e).end();
+        res.status(400).json({ error: e.message });
     }
 }
 
